@@ -19,7 +19,7 @@ Proxy some port from docker's host machine to container's port.
 
 The PORT_FORWARD_LIST support proxy multi ports which splits with space.
 
-For example, forward 3306 and 27017 from host to container's 3307 and 27018:
+For example, if we want to forward 3306 and 27017 from host to container's 3307 and 27018:
 
 `PORT_FORWARD_LIST="3306-3307 27017-27018"`
 

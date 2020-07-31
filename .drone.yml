@@ -1,0 +1,24 @@
+---
+name: build-deploy
+kind: pipeline
+
+trigger:
+  branch:
+    - master
+
+steps:
+  - name: build host-proxy
+    image: plugins/docker
+    settings:
+      repo: "tsingjyujing/host-proxy"
+      use_cache: true
+      cache_from: "tsingjyujing/host-proxy"
+      username:
+        from_secret: docker_user
+      password:
+        from_secret: docker_password
+      context: host-proxy
+      dockerfile: host-proxy/Dockerfile
+      tags:
+        - latest
+        - ${DRONE_COMMIT}

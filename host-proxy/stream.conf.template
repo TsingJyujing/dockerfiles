@@ -1,0 +1,7 @@
+
+stream {
+    server {
+        listen ${LOCAL_PORT};
+        proxy_pass ${HOST_IP}:${HOST_PORT};
+    }
+}

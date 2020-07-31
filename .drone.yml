@@ -22,3 +22,33 @@ steps:
       tags:
         - latest
         - ${DRONE_COMMIT}
+
+  - name: build mysql-lite-5
+    image: plugins/docker
+    settings:
+      repo: "tsingjyujing/mysql-lite"
+      use_cache: true
+      cache_from: "tsingjyujing/mysql-lite:5"
+      username:
+        from_secret: docker_user
+      password:
+        from_secret: docker_password
+      context: mysql-lite
+      dockerfile: mysql-lite/Dockerfile.5
+      tags:
+        - 5
+        
+  - name: build mysql-lite-8
+    image: plugins/docker
+    settings:
+      repo: "tsingjyujing/mysql-lite"
+      use_cache: true
+      cache_from: "tsingjyujing/mysql-lite:8"
+      username:
+        from_secret: docker_user
+      password:
+        from_secret: docker_password
+      context: mysql-lite
+      dockerfile: mysql-lite/Dockerfile.8
+      tags:
+        - 8

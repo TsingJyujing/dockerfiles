@@ -23,3 +23,10 @@ For example, if we want to forward 3306 and 27017 from host to container's 3307 
 
 `PORT_FORWARD_LIST="3306-3307 27017-27018"`
 
+## mysql-lite
+
+`docker pull tsingjyujing/mysql-lite:5`
+
+`docker pull tsingjyujing/mysql-lite:8`
+
+MySQL with less memory cost (and worse performance)

@@ -21,7 +21,6 @@ steps:
       dockerfile: host-proxy/Dockerfile
       tags:
         - latest
-        - ${DRONE_COMMIT}
 
   - name: build mysql-lite-5
     image: plugins/docker

@@ -8,6 +8,8 @@ else
     echo "Running in ${HOST_SYS}, using host: ${HOST_IP}"
 fi
 
+cat /etc/nginx/nginx.conf.original > /etc/nginx/nginx.conf
+
 for i in $PORT_FORWARD_LIST; 
 do IFS="-"; 
 set -- $i;

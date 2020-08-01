@@ -30,3 +30,10 @@ For example, if we want to forward 3306 and 27017 from host to container's 3307 
 `docker pull tsingjyujing/mysql-lite:8`
 
 MySQL with less memory cost (and worse performance).
+
+### Memory Cost Comparation
+
+|MySQL Version|Default Version|Lite|
+|-|-|-|
+|5|186M|46M|
+|8|325M|99M|

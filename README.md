@@ -1,6 +1,6 @@
 # Dockerfiles
 
-[![Build Status](https://drone.tsingjyujing.com/api/badges/TsingJyujing/dockerfiles/status.svg)](https://drone.tsingjyujing.com/TsingJyujing/dockerfiles)
+![Docker Image CI](https://github.com/TsingJyujing/dockerfiles/workflows/Docker%20Image%20CI/badge.svg)
 
 # Docker Images
 

@@ -24,7 +24,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       -
-        name: Build and push
+        name: Build and push (Host Proxy)
         uses: docker/build-push-action@v2
         with:
           context: host-proxy
@@ -32,3 +32,21 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/386
           push: true
           tags: tsingjyujing/host-proxy:latest
+      -
+        name: Build and push (MySQL v5)
+        uses: docker/build-push-action@v2
+        with:
+          context: mysql-lite
+          file: mysql-lite/Dockerfile.5
+          platforms: linux/amd64
+          push: true
+          tags: tsingjyujing/host-proxy:latest
+      -
+        name: Build and push (MySQL v8)
+        uses: docker/build-push-action@v2
+        with:
+          context: mysql-lite
+          file: mysql-lite/Dockerfile.8
+          platforms: linux/amd64
+          push: true
+          tags: tsingjyujing/host-proxy:latest 

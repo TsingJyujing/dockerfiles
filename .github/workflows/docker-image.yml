@@ -28,6 +28,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: host-proxy
+          file: host-proxy/Dockerfile 
           platforms: linux/amd64,linux/arm64,linux/386
           push: true
           tags: tsingjyujing/host-proxy:latest
